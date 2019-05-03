@@ -3,7 +3,11 @@ import App from './App.vue'
 import router from './route'
 import store from './store'
 
+import Bus from '@/lib/bus'
+
 Vue.config.productionTip = false
+
+Vue.prototype.$bus = Bus
 
 new Vue({
   router,

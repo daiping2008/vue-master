@@ -27,7 +27,7 @@ export default [
       name: 'bar',
       path: 'bar',
       component: () => import('@/views/bar'),
-      meta: { requireAuth: true }
+      meta: { requireAuth: false }
     }]
   },
   {
