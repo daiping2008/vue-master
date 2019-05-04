@@ -11,11 +11,15 @@
 <script>
 import { mapGetters, mapActions } from 'vuex'
 import VInput from '@/components/input'
+import axios from 'axios'
 export default {
   data () {
     return {
       value: ''
     }
+  },
+  mounted () {
+    axios.get('/user')
   },
   computed: {
     ...mapGetters(['app', 'username'])
