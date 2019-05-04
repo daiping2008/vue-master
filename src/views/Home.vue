@@ -6,8 +6,18 @@
 
 <script>
 import { mapGetters } from 'vuex'
+import Home from '@/api/home'
+const home = new Home()
 export default {
   name: 'home',
+  mounted () {
+    home.getUser().then(res => {
+      console.log(res)
+    })
+    home.login().then(res => {
+      console.log(res)
+    })
+  },
   computed: {
     ...mapGetters(['app', 'username'])
     // ...mapState('user', {
