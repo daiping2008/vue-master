@@ -2,9 +2,9 @@ const state = {
   username: 'Susan'
 }
 
-const getters = {
-  username: state => state.username
-}
+// const getters = {
+//   username: state => state.username
+// }
 
 const mutations = {
 
@@ -16,7 +16,7 @@ const actions = {
 
 export default {
   state,
-  getters,
+  // getters,
   mutations,
   actions
 }
