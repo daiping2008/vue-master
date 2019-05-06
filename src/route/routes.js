@@ -31,6 +31,16 @@ export default [
     }]
   },
   {
+    path: '/splitpane',
+    name: 'splitpane',
+    component: () => import('@/views/split-pane')
+  },
+  {
+    path: '/menu-page',
+    name: 'menu-page',
+    component: () => import('@/views/menu-page')
+  },
+  {
     path: '*',
     component: Error
   }
