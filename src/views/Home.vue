@@ -11,9 +11,9 @@ const home = new Home()
 export default {
   name: 'home',
   mounted () {
-    home.getUser().then(res => {
-      console.log(res)
-    })
+    // home.getUser().then(res => {
+    //   console.log(res)
+    // })
     home.login().then(res => {
       console.log(res)
     })

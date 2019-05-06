@@ -7,6 +7,10 @@ import Bus from '@/lib/bus'
 
 Vue.config.productionTip = false
 
+if (process.env.NODE_ENV !== 'production') {
+  require('./mocks')
+}
+
 Vue.prototype.$bus = Bus
 
 new Vue({

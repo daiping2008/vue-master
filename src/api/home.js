@@ -2,7 +2,7 @@ import HttpRequest from '@/lib/axios'
 
 class Home extends HttpRequest {
   getUser () {
-    return this.request('/user?id=123')
+    return this.request('/user')
   }
 
   login () {

@@ -2,6 +2,8 @@ import axios from 'axios'
 
 import { tips, handleError } from './error'
 
+import config from '../config/config'
+
 axios.interceptors.request.use(config => {
   // 添加Loading
   return config
@@ -20,11 +22,12 @@ class HttpReuest {
   request (url, data, method = 'GET') {
     return new Promise((resolve, reject) => {
       axios({
-        url,
+        url: config.baseUrl + url,
+        // url,
         data,
         method,
-        headers: {},
-        timeout: 2000
+        headers: {}
+        // timeout: 2000
       }).then(res => {
         const { status, data } = res
         if (status === 200) {
